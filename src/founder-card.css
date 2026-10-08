@@ -1,0 +1,17 @@
+/* ---------- Founder card (inside About) ---------- */
+.ad-root .founder-card{
+  display:flex; gap:16px; align-items:flex-start;
+  margin-top:24px; padding-top:24px; border-top:1px solid var(--line);
+}
+.ad-root .founder-card img{
+  width:68px; height:68px; border-radius:50%; object-fit:cover; flex-shrink:0;
+}
+.ad-root .founder-name{
+  font-family:'Fraunces', serif; font-weight:600; font-size:1rem; color:var(--ink);
+}
+.ad-root .founder-title{
+  font-size:0.8rem; color:var(--steel); margin-top:2px;
+}
+.ad-root .founder-quote{
+  font-size:0.88rem; color:#4B4E47; font-style:italic; margin-top:10px; max-width:32ch;
+}

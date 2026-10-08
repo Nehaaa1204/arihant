@@ -1,0 +1,60 @@
+/* ---------- Services: staggered tilt cards ---------- */
+.ad-root .services-stagger{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:32px 28px;
+}
+
+.ad-root .service-card{
+  position:relative;
+  background:#fff;
+  border-radius:20px;
+  padding:34px 30px 30px;
+  overflow:hidden;
+  box-shadow:0 10px 26px rgba(27,49,100,0.08);
+  transition:transform .35s ease, box-shadow .35s ease;
+  transform-style:preserve-3d;
+  perspective:800px;
+}
+.ad-root .service-card-offset{
+  margin-top:44px;
+}
+.ad-root .service-card:hover{
+  transform:translateY(-8px) rotateX(3deg) rotateY(-2deg);
+  box-shadow:0 26px 48px rgba(27,49,100,0.18);
+}
+
+.ad-root .service-card-accent{
+  position:absolute; top:0; left:0; right:0; height:5px;
+  background:linear-gradient(90deg, var(--rust), var(--ink));
+  transform:scaleX(0.3);
+  transform-origin:left;
+  transition:transform .4s ease;
+}
+.ad-root .service-card:hover .service-card-accent{
+  transform:scaleX(1);
+}
+
+.ad-root .service-card-num{
+  display:inline-block;
+  font-family:'Fraunces', serif;
+  font-weight:600;
+  font-size:1rem;
+  color:var(--rust);
+  background:rgba(232,100,26,0.08);
+  padding:5px 12px;
+  border-radius:100px;
+  margin-bottom:16px;
+}
+
+.ad-root .service-card h3{
+  font-size:1.18rem; font-weight:600; margin-bottom:10px;
+}
+.ad-root .service-card p{
+  font-size:0.92rem; color:#4B4E47; max-width:42ch;
+}
+
+@media (max-width:920px){
+  .ad-root .services-stagger{ grid-template-columns:1fr; gap:24px; }
+  .ad-root .service-card-offset{ margin-top:0; }
+}

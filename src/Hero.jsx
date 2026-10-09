@@ -1,40 +1,81 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import StatsBand from "./StatsBand";
+
+// Hero slides. To add another slide, copy one block and change the image/text.
+// With one slide there is no auto-advance and no dots; with two or more it
+// fades between them every 6 seconds.
+const SLIDES = [
+  {
+    image: "/images/hero/hero-door.jpg",
+    alt: "Arihant door in a modern bathroom",
+    eyebrow: "Waterproof  |  Durable  |  Beautiful",
+   
+    tagline: "Feels like staring for long",
+    text:
+      "We combine dependable performance, refined wooden-look finishes and reliable project execution to deliver bathroom door solutions that customers can trust.",
+    primary: { label: "Our Products", href: "#products" },
+    secondary: { label: "Get a Quote", href: "#contact" },
+  },
+];
 
 export default function Hero() {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    if (SLIDES.length < 2) return;
+    const t = setInterval(() => setIndex((i) => (i + 1) % SLIDES.length), 6000);
+    return () => clearInterval(t);
+  }, []);
+
+  const slide = SLIDES[index];
+
   return (
-    <section className="hero">
-      <div className="wrap hero-grid">
-        <div>
-          <div className="hero-eyebrow-line"><span className="tick"></span><span>Door manufacturing, since 1993</span></div>
-          <h1>Strength, durability &amp; innovation, built into every door.</h1>
-          <p className="lead">Arihant Doors manufactures and installs ABS moulded, FRP and Hybrid FRP door solutions for residential, commercial, government and infrastructure projects engineered for water resistance, dimensional stability and a long service life.</p>
-          <div className="hero-actions">
-            <a href="#products" className="btn-primary">View our products</a>
-            <a href="#contact" className="btn-secondary">Get a quote</a>
+    <>
+      <section className="hero-banner" aria-roledescription="carousel">
+        {/* background photos: full width, fade between slides, no zoom */}
+        {SLIDES.map((s, i) => (
+          <div
+            key={s.image}
+            className={`hb-slide${i === index ? " active" : ""}`}
+            style={{ backgroundImage: `url(${s.image})` }}
+            role="img"
+            aria-label={s.alt}
+          />
+        ))}
+        <div className="hb-overlay" />
+
+        {/* text sits on the right so the door on the left stays visible */}
+        <div className="wrap hb-inner">
+          <div className="hb-copy" key={index}>
+            <div className="hb-eyebrow">{slide.eyebrow}</div>
+            <h1>
+              {slide.line1}
+              <br />
+              <span className="accent">{slide.line2}</span>
+            </h1>
+            {slide.tagline && <p className="hb-tagline">{slide.tagline}</p>}
+            <p className="hb-text">{slide.text}</p>
+            <div className="hero-actions">
+              <a href={slide.primary.href} className="btn-primary">{slide.primary.label}</a>
+              <a href={slide.secondary.href} className="btn-ghost">{slide.secondary.label}</a>
+            </div>
           </div>
         </div>
-        <div className="hero-art">
-          {/* Real photo backdrop -- replace with an installed/finished door shot, e.g. /images/hero/hero-door.jpg */}
-          <div className="hero-photo-backdrop">
-            <img src="/images/hero/hero-door.jpg" alt="Arihant Doors installed door" loading="eager" />
+
+        {SLIDES.length > 1 && (
+          <div className="hb-dots">
+            {SLIDES.map((s, i) => (
+              <button
+                key={s.image}
+                className={i === index ? "on" : ""}
+                aria-label={`Show slide ${i + 1}`}
+                onClick={() => setIndex(i)}
+              />
+            ))}
           </div>
-          <svg viewBox="0 0 220 300" xmlns="http://www.w3.org/2000/svg">
-            <rect className="door-fill" x="30" y="20" width="140" height="240" rx="2" />
-            <rect className="door-outline" x="30" y="20" width="140" height="240" rx="2" />
-            <rect className="door-panel" x="48" y="42" width="104" height="88" rx="2" />
-            <rect className="door-panel" x="48" y="150" width="104" height="88" rx="2" />
-            <circle className="door-panel" cx="150" cy="140" r="3.5" fill="none" />
-            <line className="measure-line" x1="182" y1="20" x2="182" y2="260" />
-            <line className="measure-line" x1="176" y1="20" x2="188" y2="20" />
-            <line className="measure-line" x1="176" y1="260" x2="188" y2="260" />
-            <text className="measure-text" x="192" y="143" transform="rotate(90 192 143)" textAnchor="middle">2100 mm</text>
-            <line className="measure-line" x1="30" y1="272" x2="170" y2="272" />
-            <line className="measure-line" x1="30" y1="266" x2="30" y2="278" />
-            <line className="measure-line" x1="170" y1="266" x2="170" y2="278" />
-            <text className="measure-text" x="100" y="290" textAnchor="middle">900 mm</text>
-          </svg>
-        </div>
-      </div>
-    </section>
+        )}
+      </section>
+      <StatsBand />
+    </>
   );
 }

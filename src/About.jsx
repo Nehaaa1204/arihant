@@ -1,6 +1,6 @@
 import React from "react";
 import "./founder-card.css";
-import VisionMission from "./VisionMission";
+import VisionMission from "./Visionmission";
 
 export default function About() {
   return (

@@ -10,7 +10,30 @@ export const PRODUCTS = {
     tagline: "Waterproof, factory-made moulded doors",
     intro:
       "Waterproof solid fiber WPC frame with a high-density honeycomb or particle board core, reinforced with pine wood and finished with pre-laminated ABS sheets.",
-    image: "/images/products/ABS DOOR TECHNICAL SPECIFICATION_page-0001.jpg",
+    image: "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/ABS%20SOLID%20COLOUR/001%20-%20L-GREY.jpeg",
+    detailImages: [
+      "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/ABS%20SOLID%20COLOUR/001%20-%20L-GREY.jpeg",
+    ],
+    gallerySections: [
+      {
+        title: "ABS Solid Color",
+        images: [
+          "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/ABS%20SOLID%20COLOUR/001%20-%20L-GREY.jpeg",
+          "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/ABS%20SOLID%20COLOUR/001%20-%20R-IVORY.jpeg",
+          "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/ABS%20SOLID%20COLOUR/003%20-%20WHITE.jpeg",
+          "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/ABS%20SOLID%20COLOUR/004%20G-BROWN.jpeg",
+        ],
+      },
+      {
+        title: "ABS Wooden Color",
+        images: [
+          "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/ABS%20WOODEN%20COLOUR/PLAIN%20V2.jpeg",
+          "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/ABS%20WOODEN%20COLOUR/PLAIN%20V3.jpeg",
+          "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/ABS%20WOODEN%20COLOUR/WOODEN%204.jpeg",
+          "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/ABS%20WOODEN%20COLOUR/006%20-V9.jpeg",
+        ],
+      },
+    ],
     specs: [
       "Pre-laminated ABS sheet (1mm / 1.5mm)",
       "High-density honeycomb or particle board core (30mm)",
@@ -31,7 +54,22 @@ export const PRODUCTS = {
     tagline: "Sound proof, water and stain resistant",
     intro:
       "Sound proof, stain and water resistant doors available in a wide range of moulded designs.",
-    image: "/images/products/FRP 2023_page-0002.jpg",
+    image: "/images/products/HYBRID%20FRP%20DOOR%20CROSS%20SECTION%20(1).jpeg",
+    detailImages: [
+      "/images/products/HYBRID%20FRP%20DOOR%20CROSS%20SECTION%20(1).jpeg",
+    ],
+    gallerySections: [
+      {
+        title: "FRP Door Images",
+        images: [
+          "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/FRP%20DOOR%20IMAGES/AD002%20%20-%20IVORY.jpg",
+          "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/FRP%20DOOR%20IMAGES/AD003%20%20-%20G-BROWN%20ANTIQUE.jpg",
+          "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/FRP%20DOOR%20IMAGES/AD004%20-%20G-BROWN.jpg",
+          "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/FRP%20DOOR%20IMAGES/AD008-L-GREY%20.jpg",
+          "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/FRP%20DOOR%20IMAGES/AD12-%20L-GREY.jpg",
+        ],
+      },
+    ],
     specs: [
       "Max size available: 36\" x 84\"",
       "Thickness: 30mm / 35mm",

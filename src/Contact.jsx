@@ -2,13 +2,24 @@ import React, { useState } from "react";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", phone: "", location: "", message: "" });
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState("idle"); // idle | sending | sent | error
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setForm({ name: "", phone: "", location: "", message: "" });
-    setTimeout(() => setSubmitted(false), 4000);
+    setStatus("sending");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error("failed");
+      setForm({ name: "", phone: "", location: "", message: "" });
+      setStatus("sent");
+      setTimeout(() => setStatus("idle"), 4000);
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -72,9 +83,14 @@ export default function Contact() {
             value={form.message}
             onChange={(e) => setForm({ ...form, message: e.target.value })}
           />
-          <button type="submit">Send enquiry</button>
-          {submitted && (
+          <button type="submit" disabled={status === "sending"}>
+            {status === "sending" ? "Sending..." : "Send enquiry"}
+          </button>
+          {status === "sent" && (
             <p style={{ fontSize: "0.85rem", marginTop: "4px" }}>Thanks — we will get back to you shortly.</p>
+          )}
+          {status === "error" && (
+            <p style={{ fontSize: "0.85rem", marginTop: "4px" }}>Something went wrong. Please call us or try again.</p>
           )}
         </form>
       </div>

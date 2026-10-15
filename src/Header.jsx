@@ -34,7 +34,7 @@ export default function Header() {
           <img src={logo} alt="Arihant Doors logo" />
           <div className="brand-text">
             <span className="brand-name">ARIHANT DOORS</span>
-            <small>SINCE 2014</small>
+            <small>SINCE 1993</small>
           </div>
         </Link>
         <button

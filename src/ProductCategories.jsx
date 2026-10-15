@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { PRODUCT_LIST } from "./productsData";
+import { PRODUCT_LIST } from "./Productsdata";
 
 export default function ProductCategories() {
   return (

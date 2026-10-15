@@ -5,8 +5,8 @@ import "./kassa-style.css";
 
 import Header from "./Header";
 import Footer from "./Footer";
-import WhatsAppButton from "./WhatsAppButton";
-import useReveal from "./useReveal";
+import WhatsAppButton from "./Whatsappbutton";
+import useReveal from "./Usereveal";
 
 // Shared layout: the header and footer wrap every page.
 export default function ArihantDoors() {

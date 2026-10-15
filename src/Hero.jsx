@@ -1,20 +1,39 @@
 import React, { useEffect, useState } from "react";
 import StatsBand from "./StatsBand";
 
-// Hero slides. To add another slide, copy one block and change the image/text.
-// With one slide there is no auto-advance and no dots; with two or more it
-// fades between them every 6 seconds.
 const SLIDES = [
   {
-    image: "/images/hero/hero-door.jpg",
+    image: "/images/hero/hero-door3.jpeg",
     alt: "Arihant door in a modern bathroom",
-    eyebrow: "Waterproof  |  Durable  |  Beautiful",
-   
-    tagline: "Feels like staring for long",
+    line1: "Luxury Wooden",
+    line2: "Bathroom Doors",
+    tagline: "Modern finishes that stand the test of time",
     text:
       "We combine dependable performance, refined wooden-look finishes and reliable project execution to deliver bathroom door solutions that customers can trust.",
     primary: { label: "Our Products", href: "#products" },
     secondary: { label: "Get a Quote", href: "#contact" },
+  },
+  {
+    image:"/images/hero/hero-door.jpg",
+    alt: "Modern interior bathroom design",
+    line1: "Built for",
+    line2: "Everyday Living",
+    tagline: "Strong, elegant surfaces made to handle busy homes",
+    text:
+      "Our bathroom doors are crafted to resist moisture, maintain their look and add a premium feel to residential and commercial interiors.",
+    primary: { label: "Explore Range", href: "#products" },
+    secondary: { label: "Book a Visit", href: "#contact" },
+  },
+  {
+    image:"/images/hero/herodoor2.jpeg",
+    alt: "Contemporary home interior with custom doors",
+    line1: "Tailored",
+    line2: "Door Solutions",
+    tagline: "Designed around your style, space and project needs",
+    text:
+      "From compact bathrooms to luxury interiors, Arihant Doors delivers durable, customized styling backed by practical service and smart project support.",
+    primary: { label: "View Collection", href: "#products" },
+    secondary: { label: "Talk to Us", href: "#contact" },
   },
 ];
 
@@ -23,15 +42,19 @@ export default function Hero() {
 
   useEffect(() => {
     if (SLIDES.length < 2) return;
-    const t = setInterval(() => setIndex((i) => (i + 1) % SLIDES.length), 6000);
+    const t = setInterval(() => setIndex((i) => (i + 1) % SLIDES.length), 4000);
     return () => clearInterval(t);
   }, []);
 
   const slide = SLIDES[index];
+  const isLeftAligned = index === 0 || index === SLIDES.length - 1;
 
   return (
     <>
-      <section className="hero-banner" aria-roledescription="carousel">
+      <section
+        className={`hero-banner${isLeftAligned ? " hero-banner-left" : ""}`}
+        aria-roledescription="carousel"
+      >
         {/* background photos: full width, fade between slides, no zoom */}
         {SLIDES.map((s, i) => (
           <div
@@ -44,9 +67,8 @@ export default function Hero() {
         ))}
         <div className="hb-overlay" />
 
-        {/* text sits on the right so the door on the left stays visible */}
-        <div className="wrap hb-inner">
-          <div className="hb-copy" key={index}>
+        <div className={`wrap hb-inner${isLeftAligned ? " hb-inner-left" : ""}`}>
+          <div className={`hb-copy${isLeftAligned ? " hb-copy-left" : ""}`} key={index}>
             <div className="hb-eyebrow">{slide.eyebrow}</div>
             <h1>
               {slide.line1}
@@ -62,18 +84,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {SLIDES.length > 1 && (
-          <div className="hb-dots">
-            {SLIDES.map((s, i) => (
-              <button
-                key={s.image}
-                className={i === index ? "on" : ""}
-                aria-label={`Show slide ${i + 1}`}
-                onClick={() => setIndex(i)}
-              />
-            ))}
-          </div>
-        )}
       </section>
       <StatsBand />
     </>

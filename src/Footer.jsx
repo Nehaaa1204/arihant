@@ -79,7 +79,7 @@ export default function Footer() {
 
       <div className="wrap footer-bottom">
         <span>&copy; {year} Arihant Doors. All rights reserved.</span>
-        <span>Strength, Durability &amp; Innovation Since 2014</span>
+        <span>Strength, Durability &amp; Innovation Since 1993</span>
       </div>
     </footer>
   );

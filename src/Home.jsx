@@ -3,7 +3,7 @@ import Hero from "./Hero";
 import About from "./About";
 import ProductCategories from "./ProductCategories";
 import Values from "./Values";
-import BrandPromise from "./BrandPromise";
+import BrandPromise from "./Brandpromise";
 import Testimonials from "./Testimonials";
 import Services from "./Services";
 import Clients from "./Clients";

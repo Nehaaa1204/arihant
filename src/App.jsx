@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ArihantDoors from "./ArihantDoors";
 import Home from "./Home";
-import ProductPage from "./ProductPage";
+import ProductPage from "./Productpage";
 
 function App() {
   return (

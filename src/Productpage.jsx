@@ -1,12 +1,13 @@
 import React from "react";
 import { Link, Navigate } from "react-router-dom";
-import { PRODUCTS } from "./productsData";
+import { PRODUCTS } from "./Productsdata";
 import Contact from "./Contact";
 
 export default function ProductPage({ slug }) {
   const p = PRODUCTS[slug];
   if (!p) return <Navigate to="/" replace />;
   const other = slug === "abs" ? PRODUCTS.frp : PRODUCTS.abs;
+  const detailImages = p.detailImages ?? [p.image];
 
   return (
     <>
@@ -32,8 +33,12 @@ export default function ProductPage({ slug }) {
       {/* Overview: photo + specifications */}
       <section className="pp-overview">
         <div className="wrap pp-grid">
-          <div className="pp-photo">
-            <img src={p.image} alt={p.title} />
+          <div className="pp-gallery">
+            {detailImages.map((img, index) => (
+              <div className="pp-photo" key={`${p.slug}-${index}`}>
+                <img src={img} alt={`${p.title}${index === 0 ? "" : " cross section"}`} />
+              </div>
+            ))}
           </div>
           <div className="pp-copy">
             <h2>About {p.title}</h2>
@@ -47,6 +52,27 @@ export default function ProductPage({ slug }) {
           </div>
         </div>
       </section>
+
+      {p.gallerySections && p.gallerySections.length > 0 && (
+        <section className="pp-gallery-sections">
+          <div className="wrap">
+            {p.gallerySections.map((group) => (
+              <div className="pp-gallery-group" key={group.title}>
+                <div className="section-head pp-gallery-head">
+                  <h2>{group.title}</h2>
+                </div>
+                <div className="pp-gallery-scroll">
+                  {group.images.map((img, index) => (
+                    <div className="pp-gallery-card" key={`${group.title}-${index}`}>
+                      <img src={img} alt={`${group.title} ${index + 1}`} loading="lazy" />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Designs and colours */}
       <section className="pp-designs" id="designs">

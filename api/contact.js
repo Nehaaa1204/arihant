@@ -24,6 +24,6 @@ export default async function handler(req, res) {
     return res.status(200).json({ ok: true });
   } catch (err) {
     console.error("Mail error:", err.message);
-    return res.status(500).json({ error: "Could not send" });
+    return res.status(500).json({ error: "Could not send", detail: err.message });
   }
 }

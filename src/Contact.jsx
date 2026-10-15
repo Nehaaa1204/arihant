@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+const FORMSPREE_URL = "https://formspree.io/f/xwlvaoeq";
+
 export default function Contact() {
   const [form, setForm] = useState({ name: "", phone: "", location: "", message: "" });
   const [status, setStatus] = useState("idle"); // idle | sending | sent | error
@@ -8,10 +10,13 @@ export default function Contact() {
     e.preventDefault();
     setStatus("sending");
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch(FORMSPREE_URL, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          ...form,
+          _subject: `New enquiry from ${form.name}`,
+        }),
       });
       if (!res.ok) throw new Error("failed");
       setForm({ name: "", phone: "", location: "", message: "" });

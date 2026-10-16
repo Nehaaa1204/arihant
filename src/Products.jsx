@@ -3,7 +3,7 @@ import React from "react";
 const PRODUCTS = [
   {
     title: "ABS Moulded Doors",
-    desc: "Waterproof solid fiber WPC frame with high-density honeycomb or particle board core, reinforced with pine wood and finished with pre-laminated ABS sheets.",
+    desc: "Waterproof solid fiber PVC frame with high-density honeycomb or particle board core, reinforced with pine wood and finished with pre-laminated ABS sheets.",
     image: "/images/products/ABS DOOR TECHNICAL SPECIFICATION_page-0001.jpg",
     link: "#contact",
   },

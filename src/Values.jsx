@@ -4,7 +4,7 @@ import React from "react";
 const VALUES = [
   {
     title: "Quality Without Compromise",
-    text: "We believe every door should meet our standards for durability, finish and performance.",
+    text: "We believe every doors should meet our standards for durability, finish and performance.",
     image: "/images/about/value-1-quality.jpg",
   },
   {

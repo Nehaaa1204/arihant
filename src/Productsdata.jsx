@@ -43,7 +43,7 @@ export const PRODUCTS = {
       {
         title: "ABS Solid Color",
         images: [
-          "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/ABS%20SOLID%20COLOUR/002%20-%20L-GREY.jpeg",
+          "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/ABS%20SOLID%20COLOUR/002-L-GREY.jpeg",
           "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/ABS%20SOLID%20COLOUR/001%20-%20R-IVORY.jpeg",
           "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/ABS%20SOLID%20COLOUR/003%20-%20WHITE.jpeg",
           "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/ABS%20SOLID%20COLOUR/004%20G-BROWN.jpeg",
@@ -54,7 +54,7 @@ export const PRODUCTS = {
         images: [
           "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/ABS%20WOODEN%20COLOUR/PLAIN%20V2.jpeg",
           "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/ABS%20WOODEN%20COLOUR/PLAIN%20V3.jpeg",
-          "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/ABS%20WOODEN%20COLOUR/008%20-%20V4.jpeg",
+          "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/ABS%20WOODEN%20COLOUR/008-%20V4.jpeg",
           "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/ABS%20WOODEN%20COLOUR/006%20-V9.jpeg",
         ],
       },
@@ -67,13 +67,13 @@ export const PRODUCTS = {
       "Thickness: 30mm / 35mm",
     ],
     variants: [
-      { group: "ABS Solid Color", code: "002 · L. Grey", image: "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/ABS%20SOLID%20COLOUR/002%20-%20L-GREY.jpeg", colours: ["L. Grey"] },
+      { group: "ABS Solid Color", code: "002 · L. Grey", image: "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/ABS%20SOLID%20COLOUR/002-L-GREY.jpeg", colours: ["L. Grey"] },
       { group: "ABS Solid Color", code: "001 · R. Ivory", image: "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/ABS%20SOLID%20COLOUR/001%20-%20R-IVORY.jpeg", colours: ["R. Ivory"] },
       { group: "ABS Solid Color", code: "003 · White", image: "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/ABS%20SOLID%20COLOUR/003%20-%20WHITE.jpeg", colours: ["White"] },
       { group: "ABS Solid Color", code: "004 · G. Brown", image: "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/ABS%20SOLID%20COLOUR/004%20G-BROWN.jpeg", colours: ["G. Brown"] },
       { group: "ABS Wooden Color", code: "Plain V2", image: "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/ABS%20WOODEN%20COLOUR/PLAIN%20V2.jpeg", colours: [] },
       { group: "ABS Wooden Color", code: "Plain V3", image: "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/ABS%20WOODEN%20COLOUR/PLAIN%20V3.jpeg", colours: [] },
-      { group: "ABS Wooden Color", code: "008 · V4", image: "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/ABS%20WOODEN%20COLOUR/008%20-%20V4.jpeg", colours: [] },
+      { group: "ABS Wooden Color", code: "008 · V4", image: "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/ABS%20WOODEN%20COLOUR/008-%20V4.jpeg", colours: [] },
       { group: "ABS Wooden Color", code: "006 · V9", image: "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/ABS%20WOODEN%20COLOUR/006%20-V9.jpeg", colours: [] },
     ],
   },

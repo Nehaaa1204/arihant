@@ -4,7 +4,6 @@ import About from "./About";
 import ProductCategories from "./ProductCategories";
 import Values from "./Values";
 import BrandPromise from "./Brandpromise";
-import Testimonials from "./Testimonials";
 import Services from "./Services";
 import Clients from "./Clients";
 import Contact from "./Contact";
@@ -17,7 +16,6 @@ export default function Home() {
       <ProductCategories />
       <Values />
       <BrandPromise />
-      <Testimonials />
       <Services />
       <Clients />
       <Contact />

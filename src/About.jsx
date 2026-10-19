@@ -12,7 +12,7 @@ export default function About() {
         <div>
           <h2>Built on experience. Designed for tomorrow.</h2>
           <div className="founder-card">
-            <img src="/founder.jpeg" alt="Mr. Manilal Wagji Shah, Founder of Arihant Doors" />
+            <img src={new URL("./assets/founder.jpeg", import.meta.url).href} alt="Mr. Manilal Wagji Shah, Founder of Arihant Doors" />
             <div>
               <p className="founder-name">Mr. Manilal Wagji Shah</p>
               <p className="founder-title">Founder, Arihant Doors</p>

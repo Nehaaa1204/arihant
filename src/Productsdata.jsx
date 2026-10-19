@@ -68,6 +68,7 @@ export const PRODUCTS = {
       "Thickness: 30mm / 35mm",
     ],
     variants: [
+      { group: "ABS Solid Color", code: "002 · L. Grey", image: "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/ABS%20SOLID%20COLOUR/002-L-GREY.jpeg", colours: ["L. Grey"] },
       { group: "ABS Solid Color", code: "001 · L. Grey", image: "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/ABS%20SOLID%20COLOUR/001%20-%20L-GREY.jpeg", colours: ["L. Grey"] },
       { group: "ABS Solid Color", code: "001 · R. Ivory", image: "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/ABS%20SOLID%20COLOUR/001%20-%20R-IVORY.jpeg", colours: ["R. Ivory"] },
       { group: "ABS Solid Color", code: "003 · White", image: "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/ABS%20SOLID%20COLOUR/003%20-%20WHITE.jpeg", colours: ["White"] },

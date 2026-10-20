@@ -107,7 +107,6 @@ export const PRODUCTS = {
           "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/FRP%20DOOR%20IMAGES/AD003%20%20-%20G-BROWN%20ANTIQUE.jpg",
           "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/FRP%20DOOR%20IMAGES/AD004%20-%20G-BROWN.jpg",
           "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/FRP%20DOOR%20IMAGES/AD008-L-GREY%20.jpg",
-          "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/FRP%20DOOR%20IMAGES/AD12-%20L-GREY.jpg",
         ],
       },
     ],
@@ -121,8 +120,6 @@ export const PRODUCTS = {
       { code: "AD 004", image: "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/FRP%20DOOR%20IMAGES/AD004%20-%20G-BROWN.jpg", colours: ["G. Brown", "White", "L. Grey", "R. Ivory", "C. Brown"] },
       { code: "AD 006", image: "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/FRP%20DOOR%20IMAGES/AD003%20%20-%20G-BROWN%20ANTIQUE.jpg", colours: ["C. Brown", "White", "L. Grey", "G. Brown", "R. Ivory"] },
       { code: "AD 008", image: "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/FRP%20DOOR%20IMAGES/AD008-L-GREY%20.jpg", colours: ["L. Grey", "White", "R. Ivory", "G. Brown", "C. Brown"] },
-      { code: "AD 012", image: "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/FRP%20DOOR%20IMAGES/AD12-%20L-GREY.jpg", colours: ["G. Brown", "White", "C. Brown", "L. Grey", "R. Ivory"] },
-      { code: "AD 014", image: "/ARIHANT_DOOR_IMAGES/ARIHANT%20DOOR%20IMAGES/FRP%20DOOR%20IMAGES/PLAIN%20-%20WOODEN%20GRAINS%20IVORY.jpg", colours: ["C. Brown", "White", "L. Grey", "G. Brown", "R. Ivory"] },
     ],
   },
 };

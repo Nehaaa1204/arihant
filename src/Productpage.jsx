@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import { PRODUCTS, COLOUR_HEX } from "./Productsdata";
-import DoorDiagram from "./DoorDiagram";
+import DoorDiagram from "./Doordiagram";
 import TrimImg from "./TrimImg";
 import Contact from "./Contact";
 import "./products-style.css";

@@ -14,11 +14,10 @@
   .ad-root .navlinks a{ font-size:0.95rem; }
 }
 
-/* Header hides when you scroll down and returns when you scroll up (as on Kassa) */
+/* Sticky header stays visible while scrolling */
 .ad-root header{
-  transition:transform .4s cubic-bezier(.2,.7,.2,1), box-shadow .3s ease;
+  transition:box-shadow .3s ease;
 }
-.ad-root header.header-hidden{ transform:translateY(-100%); }
 .ad-root header.header-scrolled{ box-shadow:0 6px 24px rgba(27,49,100,0.12); }
 
 /* ---------- Hero: framed photo on the left, text on the right ---------- */
@@ -292,14 +291,16 @@
   display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:18px;
   align-items:start;
 }
-.ad-root .pp-photo{
+.ad-root .pp-page .pp-photo{
   border-radius:18px; overflow:hidden;
   box-shadow:0 24px 56px rgba(27,49,100,0.16);
   background:#f5f7fb;
-  max-width:360px;
+  max-width:420px;
   margin:0 auto;
 }
-.ad-root .pp-photo img{ width:100%; height:100%; max-height:460px; object-fit:contain; display:block; }
+.ad-root .pp-page .pp-photo img{ width:100%; height:100%; max-height:500px; object-fit:contain; display:block; }
+.ad-root .pp-page-abs .pp-photo{ max-width:460px; }
+.ad-root .pp-page-abs .pp-photo img{ max-height:560px; }
 .ad-root .pp-gallery-sections{ background:#F3F5FA; padding-top:0; }
 .ad-root .pp-gallery-group{ margin-top:20px; }
 .ad-root .pp-gallery-head{ margin-bottom:20px; }
@@ -653,3 +654,5 @@
   .ad-root .navlinks{ align-items:center; }
   .ad-root .nav-dropdown{ align-items:center; align-self:center; }
 }
+
+.ad-root .hero-actions{ align-items:center; }

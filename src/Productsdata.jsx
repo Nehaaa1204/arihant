@@ -62,7 +62,7 @@ export const PRODUCTS = {
     specs: [
       "Pre-laminated ABS sheet (1mm / 1.5mm)",
       "High-density honeycomb or particle board core (30mm)",
-      "Waterproof solid fiber WPC frame, pine wood reinforcement",
+      "Waterproof solid fiber PVC frame, pine wood reinforcement",
       "0.8mm PVC edge banding",
       "Thickness: 30mm / 35mm",
     ],

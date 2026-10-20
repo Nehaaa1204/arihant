@@ -1,10 +1,11 @@
+
 import React from "react";
 
 export default function WhatsAppButton() {
   return (
     <a
       className="whatsapp-fab"
-      href="https://wa.me/919769460494?text=Hello%20Arihant%20Doors%2C%20I%20would%20like%20a%20quote."
+      href="https://wa.me/918369676533?text=Hello%20Arihant%20Doors%2C%20I%20would%20like%20a%20quote."
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with Arihant Doors on WhatsApp"

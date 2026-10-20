@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const FORMSPREE_URL = "https://formspree.io/f/xwlvaoeq";
+const FORMSPREE_URL = "https://formspree.io/f/mkjoayzz";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", phone: "", location: "", message: "" });

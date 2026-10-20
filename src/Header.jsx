@@ -1,31 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "./logo.jpeg";
 
 export default function Header() {
   const [navOpen, setNavOpen] = useState(false);
-  const [hidden, setHidden] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const navLinkClick = () => setNavOpen(false);
 
-  // Hide the header when scrolling down, show it again when scrolling up
-  useEffect(() => {
-    let last = window.scrollY;
+  // Keep the header visible at all times while still responding to scroll depth.
+  React.useEffect(() => {
     const onScroll = () => {
-      const y = window.scrollY;
-      setScrolled(y > 10);
-      if (y > 140 && y > last + 4) setHidden(true);
-      else if (y < last - 4 || y <= 140) setHidden(false);
-      last = y;
+      setScrolled(window.scrollY > 10);
     };
+
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const classes = [
-    hidden && !navOpen ? "header-hidden" : "",
-    scrolled ? "header-scrolled" : "",
-  ].filter(Boolean).join(" ");
+  const classes = scrolled ? "header-scrolled" : "";
 
   return (
     <header className={classes}>
@@ -56,7 +48,6 @@ export default function Header() {
         </div>
 
           <Link to="/#values" onClick={navLinkClick}>Our Values</Link>
-          <Link to="/#testimonials" onClick={navLinkClick}>Testimonials</Link>
           <Link to="/#services" onClick={navLinkClick}>Services</Link>
           <Link to="/#clients" onClick={navLinkClick}>Clients</Link>
           <Link to="/#contact" className="nav-cta" onClick={navLinkClick}>Get a quote</Link>

@@ -1,8 +1,8 @@
-
 import React, { useEffect, useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import { PRODUCTS, COLOUR_HEX } from "./Productsdata";
-import DoorDiagram from "./Doordiagram";
+import DoorDiagram from "./DoorDiagram";
+import TrimImg from "./TrimImg";
 import Contact from "./Contact";
 import "./products-style.css";
 
@@ -94,13 +94,13 @@ export default function ProductPage({ slug }) {
         </div>
       </section>
 
-      {/* Overview: photo + specifications */}
+      {/* Overview: technical sheet on the left (small, click to enlarge), text on the right */}
       <section className="pp-overview" id="overview">
-        <div className="wrap pp-grid">
-          <div className="pp-gallery">
+        <div className={`wrap pp-side pp-side-${p.slug}`}>
+          <div className="pp-sheets">
             {detailImages.map((img, index) => (
-              <div className="pp-photo" key={`${p.slug}-${index}`}>
-                <img src={img} alt={`${p.title}${index === 0 ? "" : " cross section"}`} />
+              <div className="pp-sheet" key={`${p.slug}-${index}`}>
+                <img src={img} alt={`${p.title} technical specification`} loading="lazy" />
               </div>
             ))}
           </div>
@@ -137,7 +137,7 @@ export default function ProductPage({ slug }) {
                   >
                     {v.image && (
                       <span className="pp-dthumb">
-                        <img src={v.image} alt={v.code} loading="lazy" />
+                        <TrimImg src={v.image} alt={v.code} />
                       </span>
                     )}
                     <span className="pp-dname">{v.code}</span>
@@ -159,7 +159,7 @@ export default function ProductPage({ slug }) {
             </button>
             {open.image && (
               <div className="pp-modal-img">
-                <img src={open.image} alt={open.code} />
+                <TrimImg src={open.image} alt={open.code} />
               </div>
             )}
             <div className="pp-modal-info">

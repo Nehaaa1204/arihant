@@ -11,8 +11,8 @@ export const SERVICES = [
   { title: "Site measurement & survey", desc: "Door opening measurement and survey carried out for accurate manufacturing and installation." },
   { title: "Door installation", desc: "Professional installation carried out by experienced site teams." },
   { title: "Quality inspection & testing", desc: "In-house quality control, inspection and third-party testing as per applicable project requirements." },
-  { title: "Replacement & after-sales support", desc: "Support for inspection, rectification, replacement and maintenance requirements after installation." },
-  { title: "Bulk project supply", desc: "Capability to supply doors at scale for large housing, redevelopment, government and infrastructure projects." },
+  { title: "After-sales support", desc: "Support for inspection, rectification, replacement and maintenance requirements after installation." },
+  { title: "Bulk project supply", desc: "Capability to supply 200+ doors daily for large housing, redevelopment, government and infrastructure projects." },
 ];
 
 export const CLIENTS = ["CIDCO", "MHADA", "MCGM", "PWD", "CPWD", "MES"];
